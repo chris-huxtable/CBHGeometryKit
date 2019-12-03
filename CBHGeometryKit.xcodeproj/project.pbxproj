@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8339CB8323931DBE0018B882 /* CBHGeometryKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8339CB8223931DBE0018B882 /* CBHGeometryKit.podspec */; };
 		8339CB8623931DC30018B882 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8339CB8423931DC30018B882 /* LICENSE */; };
-		8339CB8723931DC30018B882 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8339CB8523931DC30018B882 /* README.md */; };
 		83FB24A62392B33A00CCACC6 /* CBHGeometryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB249C2392B33A00CCACC6 /* CBHGeometryKit.framework */; };
 		83FB24AB2392B33A00CCACC6 /* CBHGeometryKitTests+NSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FB24AA2392B33A00CCACC6 /* CBHGeometryKitTests+NSPoint.m */; };
 		83FB24AD2392B33A00CCACC6 /* CBHGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FB249F2392B33A00CCACC6 /* CBHGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -219,9 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8339CB8723931DC30018B882 /* README.md in Resources */,
 				8339CB8623931DC30018B882 /* LICENSE in Resources */,
-				8339CB8323931DBE0018B882 /* CBHGeometryKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
