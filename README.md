@@ -144,5 +144,40 @@ NSString *NSRect_description(NSRect rect);
 ```
 
 
+## `NSRange`
+```objective-c
+#pragma mark - Creating Ranges
+
+NSRange NSRange_init(NSUInteger location, NSUInteger length);
+NSRange NSRange_initFromTo(NSUInteger from, NSUInteger to);
+NSRange NSRange_initWithString(NSString *string);
+NSRange NSRange_initEmpty();
+
+
+#pragma mark - Checking Range
+
+BOOL NSRange_isEmpty(NSRange range);
+BOOL NSRange_isEqual(NSRange range, NSRange other);
+BOOL NSRange_isLocationInRange(NSRange range, NSUInteger location);
+
+
+#pragma mark - Derived Ranges
+
+NSRange NSRange_intersection(NSRange range, NSRange other);
+NSRange NSRange_union(NSRange range, NSRange other);
+
+
+#pragma mark - Calculated Properties
+
+NSUInteger NSRange_max(NSRange range);
+NSUInteger NSRange_locationAtOffset(NSRange range, NSUInteger offset);
+
+
+#pragma mark - Description
+
+NSString *NSRange_description(NSRange range);
+```
+
+
 ## Licence
 CBHGeometryKit is available under the [ISC license](https://github.com/chris-huxtable/CBHGeometryKit/blob/master/LICENSE).

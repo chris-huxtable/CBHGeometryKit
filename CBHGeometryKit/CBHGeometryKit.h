@@ -26,3 +26,5 @@ FOUNDATION_EXPORT const unsigned char CBHGeometryKitVersionString[];
 #import <CBHGeometryKit/NSPoint+CBHGeometryKit.h>
 #import <CBHGeometryKit/NSSize+CBHGeometryKit.h>
 #import <CBHGeometryKit/NSRect+CBHGeometryKit.h>
+
+#import <CBHGeometryKit/NSRange+CBHGeometryKit.h>
