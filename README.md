@@ -7,6 +7,12 @@
 
 `CBHGeometryKit` provides a consistent interface for dealing with Foundation geometry types and expands on existing functions to make a number of other operations easier.
 
+Specifically it provides functions for:
+- `NSPoint`
+- `NSSize`
+- `NSRect`
+- `NSRange`
+
 
 ## `NSPoint`
 ```objective-c

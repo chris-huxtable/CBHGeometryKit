@@ -42,7 +42,7 @@ NSSize NSSize_init(CGFloat width, CGFloat height);
  *
  * @return              A `NSSize` with its components provided by _width_ and _height_.
  *
- * Note: If _string_ does not contain any numbers the returned `NSSize` will have its components set to 0.
+ * @warning If _string_ does not contain any numbers the returned `NSSize` will have its components set to 0.
  */
 NSSize NSSize_initWithString(NSString *string);
 
@@ -65,7 +65,7 @@ NSSize NSSize_initEmpty(void);
  *
  * @return              A `BOOL` value that indicates if the size is empty.
  *
- * Note: A size with a 0 or negative component is considered empty.
+ * @warning A size with a 0 or negative component is considered empty.
  */
 BOOL NSSize_isEmpty(NSSize size);
 
@@ -146,11 +146,11 @@ NSSize NSSize_scaleParametric(NSSize size, CGFloat dWidth, CGFloat dHeight);
 
 /** Produces a string representation of the provided size.
  *
+ * Example: @"{1, 2}"
+ *
  * @param size          The size.
  *
  * @return              A `NSString` representing the provided _size_.
- *
- * Example: @"{1, 2}"
  */
 NSString *NSSize_description(NSSize size);
 

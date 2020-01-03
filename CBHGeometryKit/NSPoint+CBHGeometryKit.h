@@ -42,7 +42,7 @@ NSPoint NSPoint_init(CGFloat x, CGFloat y);
  *
  * @return              A `NSPoint` with its components provided by _x_ and _y_.
  *
- * Note: If _string_ does not contain any numbers the returned `NSPoint` will have its components set to 0.
+ * @warning             If _string_ does not contain any numbers the returned `NSPoint` will have its components set to 0.
  */
 NSPoint NSPoint_initWithString(NSString *string);
 
@@ -134,7 +134,7 @@ NSPoint NSPoint_nearestPixel(NSPoint point);
  *
  * @return              A `CGFloat` representing the distance between the two points.
  *
- * Note: This function makes use of `sqrt()` and is considered slow. If preforming distance comparison consider comparing the squared distances instead.
+ * @warning            This function makes use of `sqrt()` and is considered slow. If preforming distance comparison consider comparing the squared distances instead.
  */
 CGFloat NSPoint_distance(NSPoint start, NSPoint end);
 
@@ -145,7 +145,7 @@ CGFloat NSPoint_distance(NSPoint start, NSPoint end);
  *
  * @return              A `CGFloat` representing the distance between the two points.
  *
- * Note: This function does __NOT__ make use of `sqrt()`. Comparison of this value can be much quicker than comparing the actual distances.
+ * @warning             This function does __NOT__ make use of `sqrt()`. Comparison of this value can be much quicker than comparing the actual distances.
  */
 CGFloat NSPoint_distanceSquared(NSPoint start, NSPoint end);
 

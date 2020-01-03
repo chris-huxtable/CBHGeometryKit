@@ -61,7 +61,7 @@ NSRect NSRect_initWithSize(NSSize size);
  *
  * @return              A `NSRect` with its components provided by _x_, _y_, _width_, and _height_.
  *
- * Note: If _string_ does not contain any numbers the returned `NSRect` will have its components set to 0.
+ * @warning             If _string_ does not contain any numbers the returned `NSRect` will have its components set to 0.
  */
 NSRect NSRect_initWithString(NSString *string);
 
@@ -84,15 +84,15 @@ NSRect NSRect_initEmpty(void);
  *
  * @return              A `BOOL` value that indicates if the rects size component is empty.
  *
- * Note: A rect size with a 0 or negative component is considered empty.
+ * @warning             A rect size with a 0 or negative component is considered empty.
  */
 BOOL NSRect_isEmpty(NSRect rect);
 
 /** Indicates whether the rect is negative.
 *
-* @param rect          A rect to check.
+* @param rect           A rect to check.
 *
-* @return              A `BOOL` value that indicates if the rects size has a component which is less than 0.
+* @return               A `BOOL` value that indicates if the rects size has a component which is less than 0.
 */
 BOOL NSRect_isNegative(const NSRect rect);
 
@@ -177,7 +177,7 @@ NSRect NSRect_offset(NSRect rect, CGFloat dX, CGFloat dY);
  *
  * @return              A `NSRect` derived from _rect_ by adjusting its sides to be integer values.
  *
- * Note: Wraps NSIntegralRect
+ * @warning             Wraps NSIntegralRect
  */
 NSRect NSRect_integral(NSRect rect);
 
@@ -223,18 +223,18 @@ NSRect NSRect_alignWithPixels(NSRect rect);
  *
  * @return              A `NSRect` derived from the intersection of _rect_ and _other_.
  *
- * Note: If there is no overlap an empty rect with its origin at {0, 0} is returned.
+ * @warning             If there is no overlap an empty rect with its origin at {0, 0} is returned.
  */
 NSRect NSRect_intersection(NSRect rect, NSRect other);
 
-/** Derives a new `NSRect` representing the union (smallest rectangle which completely covers) of two rects.
+/** Derives a new `NSRect` representing the union (smallest rectangle which completely covers) the two rects.
  *
  * @param rect          A rect.
  * @param other         Another rect.
  *
  * @return              A `NSRect` derived from the union of _rect_ and _other_.
  *
- * Note: If one of the rects are empty the other rect is returned. If both are empty, an empty rect is returned with its origin at {0, 0}.
+ * @warning             If one of the rects are empty the other rect is returned. If both are empty, an empty rect is returned with its origin at {0, 0}.
  */
 NSRect NSRect_union(NSRect rect, NSRect other);
 
@@ -260,7 +260,7 @@ NSRect NSRect_centeredInRect(NSRect rect, NSRect inRect);
  *
  * @return              A `NSPoint` with the maximum x and y values for the rect.
  *
- * Note: In the case of a negative size, this may be the origin.
+ * @warning             In the case of a negative size, this may be the origin.
  */
 NSPoint NSRect_maxPoint(NSRect rect);
 
@@ -278,7 +278,7 @@ NSPoint NSRect_midPoint(NSRect rect);
  *
  * @return              A `NSPoint` with the minimum x and y values for the rect.
  *
- * Note: In the case of a negative size, this is not the origin.
+ * @warning             In the case of a negative size, this is not the origin.
  */
 NSPoint NSRect_minPoint(NSRect rect);
 
@@ -291,7 +291,7 @@ NSPoint NSRect_minPoint(NSRect rect);
  *
  * @return              A `CGFloat` representing the maximum x value for the rect.
  *
- * Note: In the case of a negative size, this may be the origins x value.
+ * @warning             In the case of a negative size, this may be the origins x value.
  */
 CGFloat NSRect_maxX(NSRect rect);
 
@@ -301,7 +301,7 @@ CGFloat NSRect_maxX(NSRect rect);
  *
  * @return              A `CGFloat` representing the maximum y value for the rect.
  *
- * Note: In the case of a negative size, this may be the origins y value.
+ * @warning             In the case of a negative size, this may be the origins y value.
  */
 CGFloat NSRect_maxY(NSRect rect);
 
@@ -327,7 +327,7 @@ CGFloat NSRect_midY(NSRect rect);
  *
  * @return              A `CGFloat` representing the minimum x value for the rect.
  *
- * Note: In the case of a negative size, this is not the origins x value.
+ * @warning             In the case of a negative size, this is not the origins x value.
  */
 CGFloat NSRect_minX(NSRect rect);
 
@@ -337,7 +337,7 @@ CGFloat NSRect_minX(NSRect rect);
  *
  * @return              A `CGFloat` representing the minimum y value for the rect.
  *
- * Note: In the case of a negative size, this is not the origins y value.
+ * @warning             In the case of a negative size, this is not the origins y value.
  */
 CGFloat NSRect_minY(NSRect rect);
 
@@ -350,11 +350,11 @@ CGFloat NSRect_minY(NSRect rect);
 
 /** Produces a string representation of the provided rect.
  *
+ * Example: @"{{1, 2}, {3, 4}}"
+ *
  * @param rect          The rect.
  *
  * @return              A `NSString` representing the provided _rect_.
- *
- * Example: @"{{1, 2}, {3, 4}}"
  */
 NSString *NSRect_description(NSRect rect);
 
