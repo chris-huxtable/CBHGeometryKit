@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = 'CBHGeometryKit'
-  spec.version                = '1.0.1'
+  spec.version                = '1.1.0'
   spec.module_name            = 'CBHGeometryKit'
 
   spec.summary                = 'Expanded and consistently named tools for managing Foundation geometry.'
